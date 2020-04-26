@@ -3,9 +3,14 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "menu.html" . -}}
-
         {{- partial "hero.html" . -}}
+
+        <div class="container is-widescreen ">
+        {{- partial "testimonials.html" . -}}
+        </div>
+        <section  class="">
         {{- partial "footer.html" . -}}
+        </section>  
         {{- partial "script.html" . -}}
     </body>
 </html>
