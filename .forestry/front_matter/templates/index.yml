@@ -11,3 +11,8 @@ fields:
 - type: text
   name: hero_subtitle
   label: hero_subtitle
+- name: sub-sub-title
+  type: text
+  config:
+    required: false
+  label: Sub-sub-title
