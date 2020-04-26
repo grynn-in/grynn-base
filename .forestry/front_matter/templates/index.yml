@@ -1,0 +1,20 @@
+---
+label: index
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: hero_title
+  label: hero_title
+- type: text
+  name: hero_subtitle
+  label: hero_subtitle
+- name: sub-sub-title
+  type: text
+  config:
+    required: false
+  label: Sub-sub-title
+pages:
+- content/our-expertise.md
