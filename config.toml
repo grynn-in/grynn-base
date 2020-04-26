@@ -80,4 +80,12 @@ theme = "vinayak"
     url = 		"/our-offers/buy"
     weight = 		-185
 
+    [[menu.main]]
+    parent = 		"GRYNN BUY"
+    identifier = 	"GRYNN P2P"
+    name = 		"GRYNN P2P"
+    title = 		"GRYNN P2P"
+    url = 		"/our-offers/buy"
+    weight = 		-185
+
 
