@@ -16,3 +16,5 @@ fields:
   config:
     required: false
   label: Sub-sub-title
+pages:
+- content/our-expertise.md
