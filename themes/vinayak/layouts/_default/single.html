@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en-US" class="has-navbar-fixed-top  has-navbar-fixed-bottom">
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "menu.html" . -}}
-        {{- partial "hero.html" . -}}
-
-        <div class="container is-widescreen ">
-        {{- partial "testimonials.html" . -}}
+{{ define "main" }}
+<div class="container">
+    <div class="section ">
+        <div class="content">
+            <h1>{{ .Title }} coming from single</h1>
+            {{ .Content }}
         </div>
-        <section  class="">
-        {{- partial "footer.html" . -}}
-        </section>  
-        {{- partial "script.html" . -}}
-    </body>
-</html>
+    </div>
+</div>
+{{ end }}
+
+
