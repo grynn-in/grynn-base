@@ -1,12 +1,8 @@
-<section class="hero is-info is-large" style="background: url(&quot;/_gen/images/japanese-waves-website.jpg/&quot;) 0% 0% / cover repeat scroll padding-box border-box rgba(0, 0, 0, 0);" >
-  <div class="hero-body grynn-hero">
-    <div class="container has-text-centered">
-      
-      <h1 class="title">{{ .Params.hero_title}} <br /></h1>
-
-      <h2 class="subtitle">{{ .Params.hero_subtitle}} <br /></h2>
-
-      <div class="buttons is-centered"><a class="button is-primary" href="#">Read more »</a></div>
-    </div>
-  </div>
+<section class="hero is-medium grynn-hero-with-image" >
+    <div class="hero-body ">
+      <div class="container has-text-centered ">
+        <h1 class="title grynn-hero-font-title">{{ .Params.hero_title | safeHTML }} <br /></h1>
+        <h2 class="subtitle grynn-hero-font-subtitle">{{ .Params.hero_subtitle |  safeHTML }} <br /></h2>
+      </div>
+   </div>
 </section>

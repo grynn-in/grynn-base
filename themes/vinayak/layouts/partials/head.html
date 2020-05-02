@@ -5,65 +5,233 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <style>
-        .nested.dropdown {
-          &:hover > .dropdown-menu {
-            display: block;
-          }
-          .dropdown-menu {
-            top: -15px;
-            margin-left: 100%;
-          }
-          .dropdown-trigger {
-            button::after {
-              content: '⦠'
-            }
-            button {
-              padding: 0px 0px;
-              border: 0px;
-              font-size: 14px;
-              font-weight: 400;
-              height: 2em;
-            }
-          }
-        }
-
         .grynn-hero {
-            background-color: #1c008e;
-            opacity:0.9;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fefeff' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");        
-            background: rgb(142,129,199);
-            background: linear-gradient(90deg, rgba(142,129,199,1) 13%, rgba(28,0,142,1) 48%, rgba(28,0,142,1) 100%);
+          color: #fff;
+          background-color: #1c008e;
 
+          /*opacity:0.9;*/
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fefeff' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");        
         }
 
-       .grynn-body {
-            background-color: #ffffff;
-            opacity:0.1;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23bdb1d0' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background: rgb(142,129,199);
-            background: linear-gradient(90deg, rgba(142,129,199,1) 13%, rgba(28,0,142,1) 48%, rgba(28,0,142,1) 100%);
-
+        .grynn-hero-with-image {
+            font-size: 60px;
+            color:floralwhite;
+            background-image: url("/japanese-waves-no-sun.jpg");
+            background-size: cover;
         }
 
-        .grynn-x {
-            background-color: #DFDBE5;
-            opacity:0.1;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background: rgb(142,129,199);
-            background: linear-gradient(90deg, rgba(142,129,199,1) 13%, rgba(28,0,142,1) 48%, rgba(28,0,142,1) 100%);
-
+        
+        .grynn-hero-font-title {
+            font-size: 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #5e548e;
         }
 
-        .grynn-footer {
-            color:#1c008e;
-            opacity:0.1;
-            background-color: #DFDBE5;
-            background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-            background: rgb(142,129,199);
-            background: linear-gradient(90deg, rgba(142,129,199,1) 13%, rgba(28,0,142,1) 48%, rgba(28,0,142,1) 100%);
-
+        .grynn-hero-font-subtitle {
+            font-size: 45px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #5e548e;
+        }
+        #total {
+            /*background-color: #FFFF00;*/
+            border-bottom: 2pc solid rebeccapurple;
+            padding: 0px 0px  0px;
         }
 
 
+
+
+    </style>
+
+    <style>
+        /*------------------------------------*\
+    $HOUSEKEEPING
+\*------------------------------------*/
+*{ margin:0; padding:0; }
+html{
+    padding:5%;
+    font:1em/1.5 Georgia, serif;
+    overflow-y:scroll;
+}
+ul{
+    margin-bottom:1.5em;
+    margin-left:1.5em;
+}
+a{
+    text-decoration:none;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Throw any `ul` or `ol` into horizontal mode, as per csswizardry.com/2011/09/the-nav-abstraction.
+   <ul class=nav>
+       <li><a href=/>Home</a></li>
+       <li><a href=/about>About</a></li>
+       <li><a href=/portfolio>Portfolio</a></li>
+       <li><a href=/contact>Contact</a></li>
+   </ul>
+ */
+.nav{
+    list-style:none;
+    margin-left:0;
+}
+    .nav > li,
+        .nav > li > a{
+            display:inline-block;
+           *display:inline;
+            zoom:1;
+        }
+    
+    /**
+     * Create a vertically stacked nav by extending `.nav` with `.stacked`.
+       <ul class="nav stacked">
+           <li><a href=/>Home</a></li>
+           <li><a href=/about>About</a></li>
+           <li><a href=/portfolio>Portfolio</a></li>
+           <li><a href=/contact>Contact</a></li>
+       </ul>
+     */
+    .stacked > li{
+        display:list-item;
+    }
+        .stacked > li > a{
+            display:block;
+    }
+
+
+/*------------------------------------*\
+    $FLYOUT
+\*------------------------------------*/
+/**
+ * Flyouts are pieces of content that fly out of a parent when said parent is hovered.
+ * They typically appear bottom-left of the parent.
+   <div class=flyout>
+       Foo
+       <div class=flyout-content>
+           <h1>Lorem</h1>
+           <p>Ipsum</p>
+       </div>
+   </div>
+ */
+.flyout,
+.flyout-alt{
+    position:relative;
+}
+    .flyout-content{
+        /* Position the flyouts off-screen. This is typically better than `display:none;`. */
+        position:absolute;
+        top:100%;
+        left:-99999px;
+        /**
+         * Even though they are out of document flow, lots of nested flyouts can
+         * eventually force scroll bars to appear as they become taller than the viewport.
+         * We can undo this effect by giving them zero height.
+         */
+        height:0;
+        overflow:hidden;
+    }
+    
+    /**
+     * Bring the flyouts into view when you hover their parents.
+     * Two different types of flyout; ‘regular’ (`.flyout`) and ‘alternative’ (`.flyout-alt`).
+     */
+    /* Regular flyouts sit all the way from the top, flush left. */
+    .flyout:hover > .flyout-content{
+        left:0;
+    }
+    /* Alternative flyouts sit all the way from the left, flush top. */
+    .flyout-alt:hover > .flyout-content{
+        top:0;
+        left:100%;
+    }
+    .flyout:hover > .flyout-content,
+    .flyout-alt:hover > .flyout-content{
+        /* Give the flyouts their height back once they come into view. */
+        height:auto;
+        overflow:visible;
+    }
+
+
+
+
+
+/*------------------------------------*\
+    $SITE-NAV
+\*------------------------------------*/
+/**
+ * Site nav specific styling.
+ * Extends `.nav{}`
+ */
+.site-nav{
+    font-size:0.75em;
+    font-family:sans-serif;
+}
+        .site-nav a{
+            line-height:1;
+            padding:1em;
+            background-color:#09f;
+            color:#fff;
+            white-space:nowrap;
+        }
+
+/*--- SITE-NAV FLYOUTS ---*/
+/**
+ * Site nav specific flyouts, extension of `.flyout`.
+ * Set up some styles to apply and persist when we hover things in the site nav.
+ * This allows us to keep parents highlighted as we hover their contained flyouts [1].
+ */
+.site-nav .flyout:hover > a /* [1] */,
+.site-nav .flyout-alt:hover > a /* [1] */,
+.site-nav a:hover{
+    color:#435704;
+    background-color:#BADA55;
+}
+
+/**
+ * Add an indicator to any flyout parents in the site nav to show there’s a flyout.
+ */
+.site-nav .flyout-alt > a:after{
+    content:" »";
+}
+
+/**
+ * Here we set up a load of shared borders on the site-nav specific flyouts.
+ * The code looks a little scattered but it allows us to cleverly share declarations:
+ * We set up a non-existent [1] solid [2] border on all sides of the relevant elements.
+ * We can now also change the style [2] and colour [3] of all borders in one go.
+ * Now we have set up border colours and styles, we need to just turn the desired borders ‘on’ [4].
+ */
+.site-nav a,
+.site-nav .flyout-content{
+    border:0     /* [1] */
+           solid /* [2] */
+           #fff  /* [3] */;
+}
+.site-nav > li > a{
+    border-left-width:1px; /* [4] */
+}
+/* The first link in the site-nav doesn’t require a border at all. */
+.site-nav > li:first-child > a{
+    border:none;    
+}
+.site-nav .flyout-content{
+    border-width:1px 0 0 1px; /* [4] */
+}
+.site-nav .flyout-content a{
+    border-bottom-width:1px; /* [4] */
+}
+.site-nav .flyout-alt:hover > .flyout-content{
+    /**
+     * To account for the 1px top border on the flyout containers, we need to
+     * bring the flyouts back up by 1px in this special instance.
+     */
+    top:-1px;
+}​
     </style>
 </head>

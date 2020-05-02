@@ -1,11 +1,8 @@
 ---
 title: "Grynn Buy"
-hero_title: "Fast & Good. Pankaj is the best!"
-hero_subtitle: "This is the best page because it is a great page"
+hero_title: "<span id=\"total\">Deliver</span>, no matter what!"
+hero_subtitle: "<br/><p> Delivering to your customers is more important than ever. </p> 
+<p> You take care of them. We will take care of you.</p>"
 ---
 
-# This is header
-## This is header 2
-### This is header 3
-#### Pankaj is awesome 4
-...
+
