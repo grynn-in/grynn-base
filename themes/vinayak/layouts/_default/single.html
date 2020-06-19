@@ -2,8 +2,11 @@
 <div class="container">
     <div class="section ">
         <div class="content">
-            <h1>{{ .Title }} coming from single</h1>
-            {{ .Content  |  safeHTML}}
+            <h1>{{ .Params.Title }} coming from single</h1>
+            <h1 class="title grynn-hero-font-title">{{ .Params.product_name | safeHTML }} <br /></h1>
+            <h2 class="subtitle grynn-hero-font-subtitle">{{ .Params.product_id |  safeHTML }} <br /></h2>
+
+
         </div>
     </div>
 </div>
