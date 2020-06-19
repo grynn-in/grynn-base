@@ -1,0 +1,102 @@
+/* colors */
+$white: #ffffff;
+$black: #000000;
+$dark-blue: #19174d;
+$dark-blue-light: rgba(25, 23, 77, 0.25);
+$green: #00b654;
+$red: #f63336;
+$grey: rgba(0, 0, 0, 0.3);
+$light-grey: #f2f2f6;
+
+/* text*/
+$normal-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+$heavy-weight: 900;
+
+/* dimensions */
+$max-width: 1288px;
+$padding-left-right: 8px;
+$breakpoint-large: 1200px;
+$breakpoint-medium: 768px;
+$breakpoint-small: 420px;
+
+/* mixins */
+@mixin responsive_mobile() {
+  @media only screen and (max-width: calc(#{$breakpoint-medium} - 1px)) {
+    @content;
+  }
+}
+@mixin responsive_desktop() {
+  @media only screen and (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+@mixin responsive_max($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin responsive_min($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin hover-cursor-pointer() {
+  &:hover {
+    cursor: pointer;
+    @content;
+  }
+}
+
+@mixin btn($text, $bg, $border, $h-text, $h-bg, $h-border) {
+  padding: 20px 18px 18px 18px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: $bold-weight;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: $text;
+  background: $bg;
+  border: 1px solid $border;
+  border-radius: 5px;
+  transition: all 300ms ease-in-out;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $h-text;
+    background: $h-bg;
+    border-color: 1px solid $h-border;
+  }
+  img {
+    margin-right: 8px;
+  }
+  svg {
+    fill: $text;
+    margin-right: 8px;
+  }
+  &:hover svg {
+    fill: $h-text;
+  }
+  @include hover-cursor-pointer() {
+    text-decoration: none;
+  }
+  @content;
+}
+
+@mixin shadow() {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+@mixin huge-shadow() {
+  box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+    0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}

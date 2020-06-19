@@ -1,5 +1,31 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en-US" class="has-navbar-fixed-top  has-navbar-fixed-bottom">
+        {{- partial "head.html" . -}}
+    <body>
+    	{{- partial "header.html" . -}}
+        {{- partial "menu.html" . -}}
+        {{- partial "hero.html" . -}}
 
+        <main id="content">
+            <h2>this comes from index.html</h2></h2>
+            {{- block "main" . }}
+            {{- end }}
+        </main>
+
+        <div class="container is-widescreen ">
+        {{- partial "testimonials.html" . -}}
+        </div>
+
+        <section  class="">
+        {{- partial "footer.html" . -}}
+        </section>
+
+        {{- partial "script.html" . -}}
+    </body>
+</html>
+
+
+{{ define "main" }}
 <section class="hero" style="background-color:#fff; padding-top:100px; padding-bottom:100px; ">
   <div class="tile is-ancestor" style=" margin:50px; ">
     <div class="tile is-parent">
@@ -24,9 +50,9 @@
       </article>
     </div>
   </div>
-  
-
 </section>
+
+
 <section class="hero" style="background-color:#fff; padding-top:40px; padding-bottom:80px;">
   <div class="hero-body">
     <div class="container" style="margin:0px,0px,0px,0px;">
@@ -54,26 +80,7 @@
     </div>
   </div>
 </section>
-<section class="section">
-   <div class="container" style="margin-top: 50px;margin-bottom: 50px;">
-      <div class="columns is-left is-vcentered">
-        <div class="column"><img src="https://res.cloudinary.com/grynn-gmbh/image/upload/t_testimonial_550/v1592301381/v3tech/WhatsApp_Image_2020-04-27_at_10.56.00_PM-removebg_2_gfowqa.png" alt="image of rashmi acharya"></div>
-        <div class="column">
-          <div class="content" style="margin-top: 1pc;">
-            <h2 class="title" style="font-size: 3pc; color: #5e548e; margin-top: 3pc;">Grynn helps V3Tech during hyper-growth!</h2>
-            <blockquote> 
-              <p style="font-size: 2pc; color: #5e548e;">“We are now rolling this across 2 more locations and across all functions. Grynn  helped us get it right!” </p> 
-              <p style="font-size: 2pc;"> </p> 
-            </blockquote>
-            <cite>
-              <h5 class="title is-5" style="font-size: 2pc; color: #5e548e;"> Rashmi Acharya</h5>
-              <p class="subtitle" style="font-size: 2pc; color: #5e548e;"> Finance Director at V3 Tech </p>
-            </cite>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="hero" style="background-color:#ededed; padding-top:40px; padding-bottom:80px;">
     <div class="hero-body">

@@ -1,0 +1,68 @@
+@import "vars";
+
+section.products {
+  margin: 64px 0;
+  > header > h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: $heavy-weight;
+    margin: 16px 0;
+  }
+  > .myslick {
+    .myslick-slide {
+      position: relative;
+      a.product-link {
+        .image {
+          background: $light-grey;
+          img {
+            width: 100%;
+            object-fit: scale-down;
+          }
+        }
+        .info {
+          h3 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: $bold-weight;
+            margin-top: 16px;
+          }
+          .brand {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: $normal-weight;
+          }
+          .price {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: $bold-weight;
+          }
+        }
+      }
+      a.favourite-link {
+        width: 26px;
+        height: 21px;
+        position: absolute;
+        display: inline-block;
+        top: 24px;
+        right: 24px;
+        img {
+          &.nohover {
+            display: inline-block;
+          }
+          &.hover {
+            display: none;
+          }
+        }
+        &.active img,
+        &:hover img {
+          &.nohover {
+            display: none;
+          }
+          &.hover {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

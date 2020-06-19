@@ -1,0 +1,34 @@
+@import "vars";
+
+.breadcrumb {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 12px 0;
+  @include responsive_mobile() {
+    font-size: 13px;
+  }
+  ul {
+    display: inline-block;
+    li {
+      display: inline-block;
+      &::after {
+        content: "/";
+        padding: 0 0 0 2px;
+        margin: 0;
+      }
+      &:last-child::after {
+        content: none;
+      }
+      a {
+        padding: 0 1px;
+      }
+      &:last-child {
+        a {
+          font-weight: $bold-weight;
+        }
+      }
+    }
+  }
+}

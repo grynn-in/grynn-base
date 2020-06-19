@@ -1,0 +1,213 @@
+@import "vars";
+
+body > header {
+  padding: 0;
+  color: $white;
+  background: $dark-blue;
+  > div {
+    &.top {
+      font-size: 13px;
+      background: $grey;
+      > .main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        nav.top-menu a {
+          color: $white;
+        }
+        .currency {
+          .select {
+            width: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            select {
+              color: $white;
+              background: $dark-blue-light;
+              padding: 0 8px;
+              option {
+                color: $white;
+                background: $dark-blue;
+              }
+            }
+            &::after {
+              font-size: 9px;
+              color: $white;
+              padding: 0;
+              top: 2px;
+              right: 8px;
+            }
+          }
+        }
+      }
+    }
+    &.main > .main-content {
+      display: grid;
+      column-gap: 8px;
+      grid-template-areas: "brand category-menu icons";
+      @include responsive_mobile() {
+        grid-template-areas: "category-menu-toggle brand icons";
+        grid-template-columns: min-content auto max-content;
+      }
+      > div,
+      > nav {
+        justify-self: stretch;
+        align-self: center;
+      }
+      a {
+        color: $white;
+      }
+      .brand {
+        grid-area: brand;
+        a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      .category-menu-toggle {
+        grid-area: category-menu-toggle;
+        @include responsive_desktop() {
+          display: none;
+        }
+        button {
+          font-size: 16px;
+          line-height: 16px;
+          font-weight: $heavy-weight;
+          margin: 8px 0;
+          padding: 6px 6px 4px 6px;
+          background-color: $white;
+          transition: all 350ms ease-in-out;
+          @include hover-cursor-pointer() {
+            background-color: $light-grey;
+          }
+        }
+      }
+      .category-menu {
+        grid-area: category-menu;
+        @include responsive_mobile() {
+          display: none;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          @include responsive_mobile() {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+            padding-bottom: 8px;
+          }
+          li {
+            padding: 0;
+            a {
+              padding: 32px 1px 28px 1px;
+              position: relative;
+              display: block;
+              &:hover {
+                text-decoration: none;
+              }
+              &.active {
+                font-weight: $bold-weight;
+              }
+              &.active::after,
+              &:hover::after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 50%;
+                margin-left: -16px;
+                width: 32px;
+                height: 4px;
+                background: $white;
+              }
+              @include responsive_mobile() {
+                padding: 8px 8px 8px 16px;
+                &.active::after,
+                &:hover::after {
+                  content: "";
+                  top: 50%;
+                  left: 0;
+                  bottom: auto;
+                  margin-left: auto;
+                  margin-top: -5px;
+                  width: 3px;
+                  height: 10px;
+                  background: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .icons {
+        grid-area: icons;
+        ul {
+          justify-content: flex-end;
+          > li {
+            margin-left: 0px;
+            &:first-child {
+              margin-left: 0px;
+            }
+            > a {
+              position: relative;
+              display: inline-block;
+              padding: 8px;
+              @include responsive_mobile() {
+                padding-left: 2px;
+                padding-right: 6px;
+              }
+              border-radius: 5px;
+              img {
+                opacity: 0.5;
+              }
+              &:hover img {
+                opacity: 1;
+              }
+              .badge {
+                font-size: 11px;
+                font-weight: $bold-weight;
+                color: $dark-blue;
+                background: $white;
+                border: 2px solid $dark-blue;
+                border-radius: 8px;
+                padding: 2px 5px;
+                position: absolute;
+                right: -2px;
+                top: 0px;
+              }
+              &:hover {
+                background: $grey;
+              }
+            }
+          }
+        }
+      }
+      &.show {
+        @include responsive_mobile() {
+          row-gap: 8px;
+          grid-template-areas:
+            "category-menu-toggle brand icons"
+            "category-menu category-menu category-menu";
+        }
+        .category-menu-toggle {
+          button {
+            @include responsive_mobile() {
+              transform: rotate(90deg);
+            }
+          }
+        }
+        .category-menu {
+          @include responsive_mobile() {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

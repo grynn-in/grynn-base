@@ -1,0 +1,89 @@
+@import "vars";
+
+body {
+  font-family: "Mark Pro", sans-serif;
+  font-style: normal;
+  font-weight: $normal-weight;
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  color: $dark-blue;
+  background: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+b,
+strong {
+  font-weight: $bold-weight;
+}
+
+.main-content {
+  max-width: $max-width;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+body > header > div,
+body > main,
+body > footer > div.main-content {
+  padding: 0 $padding-left-right;
+}
+
+p {
+  text-align: left;
+  font-weight: $normal-weight;
+}
+
+a {
+  color: $dark-blue;
+  text-decoration: none;
+  @include hover-cursor-pointer() {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  @include btn($dark-blue, transparent, $dark-blue-light, $white, $dark-blue, $dark-blue);
+}
+
+nav.nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    > li {
+      padding: 0;
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
+
+.dark-blue {
+  color: $dark-blue;
+}
+
+.desktop {
+  @include responsive_mobile() {
+    display: none;
+  }
+}
+.mobile {
+  @include responsive_desktop() {
+    display: none;
+  }
+}
