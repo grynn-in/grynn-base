@@ -1,13 +1,14 @@
 {{ define "main" }}
+<main>
 <div class="container">
     <div class="section ">
         <div class="content">
-            <h1>{{ .Params.Title }} coming from single</h1>
-            <h1 class="title grynn-hero-font-title">{{ .Params.product_name | safeHTML }} <br /></h1>
-            <h2 class="subtitle grynn-hero-font-subtitle">{{ .Params.product_id |  safeHTML }} <br /></h2>
-
+            <h1 class="title grynn-hero-font-title">{{ .Params.hero_title | safeHTML }} <br /></h1>
+            <h2 class="subtitle grynn-hero-font-subtitle">{{ .Params.hero_subtitle |  safeHTML }} <br /></h2>
 
         </div>
     </div>
 </div>
+</main>
 {{ end }}
+

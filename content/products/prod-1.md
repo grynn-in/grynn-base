@@ -1,0 +1,20 @@
+---
+title: "Grynn Products folder"
+hero_title: "<span id=\"total\">Deliver,</span> no matter what Prod-1!"
+hero_subtitle: "<br/><p> Delivering to your customers is more important than ever. <br/></p> 
+<p> You take care of them. We will take care of you.</p> products/index </p>" 
+product_name: "BITUMAT B275 mm 400 V / 50 Hz / 6700 W 16A-5P"
+product_id: "Obj. číslo:140.438"
+product_title: "BITUMAT B2 | Weldplast"
+product_filename: "C:UserspaideDownloadswww.weldplast.czmarkdownzvon-zkusebni-o-320.md"
+product_name: "Zvon vákuový skúšobnýguľatý"
+product_id: "Obj. číslo:153.026"
+product_title: "Zvon zkušební ø 320 | Weldplast"
+product_desc: "Leister VÁKUOVÝ SKÚŠOBNÝ ZVON na testovanie tesnosti zvarov pomocou zmeny podtlaku s manometrom. Jednoduché a presné testovanie Okrúhly tvar ideálny pre testovanie detailov vrátane manometra Kompletné testovacie zariadenie sa skladá zo zvona (okrúhleho alebo hranatého) a vývevy."
+product_specs: "Rozmerymm320"
+product_downloads: "ZVON ZKUŠEBNÍ - produktový list stiahnuť"
+product_href: "../files/zvon-s-vyvevou-produktovy-list-eng-1.pdf ../files/zvon-s-vyvevou-produktovy-list-eng-1.pdf"
+product_desc_2: "Leister VÁKUOVÝ SKÚŠOBNÝ ZVON na testovanie tesnosti zvarov pomocou zmeny podtlaku s manometrom. Jednoduché a presné testovanie Okrúhly tvar ideálny pre testovanie detailov vrátane manometra Kompletné testovacie zariadenie sa skladá zo zvona (okrúhleho alebo hranatého) a vývevy."
+product_accessories: "Pumpa vákuovás kufrom 5 m hadica mn.vzduchu 35/42 m3/hZvon vákuový skúšobnýhranatý 810 mm x 310 mm"
+product_similar: ""
+---

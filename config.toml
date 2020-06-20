@@ -1,7 +1,7 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "Grynn Website"
-theme = "vinayak"
+theme = "apneaman"
 
 [markup.goldmark.renderer]
 unsafe = true
